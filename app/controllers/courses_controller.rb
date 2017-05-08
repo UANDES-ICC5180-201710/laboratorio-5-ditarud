@@ -1,10 +1,11 @@
 class CoursesController < ApplicationController
-  before_action :set_course, only: [:show, :edit, :update, :destroy, :students]
+  before_action :set_course, only: [:show, :edit, :update, :destroy, :students, :assignments]
 
   # GET /courses
   # GET /courses.json
   def index
     @courses = Course.all
+    
   end
 
   # GET /courses/1
@@ -62,7 +63,11 @@ class CoursesController < ApplicationController
   end
 
   def students
-    
+
+  end
+
+  def assignments
+
   end
 
   private
